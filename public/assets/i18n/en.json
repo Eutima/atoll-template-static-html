@@ -1,0 +1,17 @@
+{
+  "common": { "language": "Language" },
+  "auth": {
+    "loginPrompt": {
+      "title": "Sign in required",
+      "busy": "Signing you in…",
+      "description": "This app requires a Helix login to continue.",
+      "cta": "Login with Helix"
+    },
+    "accessDenied": {
+      "title": "Permission denied",
+      "message": "Permission denied — contact your administrator.",
+      "signOut": "Sign out"
+    },
+    "callback": { "busy": "Signing you in…" }
+  }
+}

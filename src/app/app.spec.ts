@@ -1,12 +1,29 @@
 import { TestBed } from '@angular/core/testing';
+import { provideTransloco } from '@jsverse/transloco';
 import { App } from './app';
+import { HelixAuthService } from './core/auth/helix-auth.service';
+import { TranslocoHttpLoader } from './core/i18n/transloco.loader';
+import { AVAILABLE_LANGS, DEFAULT_LANG } from './core/i18n/i18n.model';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
-    })
-      .compileComponents();
+      providers: [
+        provideTransloco({
+          config: {
+            availableLangs: AVAILABLE_LANGS,
+            defaultLang: DEFAULT_LANG,
+            fallbackLang: DEFAULT_LANG,
+          },
+          loader: TranslocoHttpLoader,
+        }),
+      ],
+    }).compileComponents();
+    // TestBed.createComponent doesn't run app-level initializers
+    // (provideAppInitializer), so resolve the gate explicitly — Helix is
+    // unconfigured in this environment, so this settles to 'disabled'.
+    await TestBed.inject(HelixAuthService).bootstrap();
   });
 
   it('should create the app', () => {

@@ -1,0 +1,17 @@
+{
+  "common": { "language": "Lingua" },
+  "auth": {
+    "loginPrompt": {
+      "title": "Accesso richiesto",
+      "busy": "Accesso in corso…",
+      "description": "Questa app richiede l'accesso con Helix.",
+      "cta": "Accedi con Helix"
+    },
+    "accessDenied": {
+      "title": "Accesso negato",
+      "message": "Accesso negato — contatta il tuo amministratore.",
+      "signOut": "Esci"
+    },
+    "callback": { "busy": "Accesso in corso…" }
+  }
+}

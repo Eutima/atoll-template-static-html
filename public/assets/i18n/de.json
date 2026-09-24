@@ -1,0 +1,17 @@
+{
+  "common": { "language": "Sprache" },
+  "auth": {
+    "loginPrompt": {
+      "title": "Anmeldung erforderlich",
+      "busy": "Sie werden angemeldet…",
+      "description": "Diese App erfordert eine Anmeldung mit Helix.",
+      "cta": "Mit Helix anmelden"
+    },
+    "accessDenied": {
+      "title": "Zugriff verweigert",
+      "message": "Zugriff verweigert — wenden Sie sich an Ihren Administrator.",
+      "signOut": "Abmelden"
+    },
+    "callback": { "busy": "Sie werden angemeldet…" }
+  }
+}

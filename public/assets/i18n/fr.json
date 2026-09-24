@@ -1,0 +1,17 @@
+{
+  "common": { "language": "Langue" },
+  "auth": {
+    "loginPrompt": {
+      "title": "Connexion requise",
+      "busy": "Connexion en cours…",
+      "description": "Cette application nécessite une connexion avec Helix.",
+      "cta": "Se connecter avec Helix"
+    },
+    "accessDenied": {
+      "title": "Accès refusé",
+      "message": "Accès refusé — contactez votre administrateur.",
+      "signOut": "Se déconnecter"
+    },
+    "callback": { "busy": "Connexion en cours…" }
+  }
+}

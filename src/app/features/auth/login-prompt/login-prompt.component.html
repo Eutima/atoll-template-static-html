@@ -1,0 +1,18 @@
+<div class="flex min-h-screen items-center justify-center bg-gray-50 px-4">
+  <div class="w-full max-w-sm rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
+    <h1 class="text-lg font-semibold text-gray-900">{{ 'auth.loginPrompt.title' | transloco }}</h1>
+
+    @if (isBusy()) {
+      <p class="mt-4 text-sm text-gray-500">{{ 'auth.loginPrompt.busy' | transloco }}</p>
+    } @else {
+      <p class="mt-2 text-sm text-gray-500">{{ 'auth.loginPrompt.description' | transloco }}</p>
+      <button
+        type="button"
+        (click)="login()"
+        class="mt-6 w-full rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700"
+      >
+        {{ 'auth.loginPrompt.cta' | transloco }}
+      </button>
+    }
+  </div>
+</div>

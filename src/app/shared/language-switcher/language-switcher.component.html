@@ -1,0 +1,24 @@
+<div class="flex items-center gap-1.5 rounded-lg bg-white/90 px-2 py-1.5 shadow-sm ring-1 ring-gray-200 backdrop-blur">
+  <svg
+    class="h-4 w-4 text-gray-500"
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.75"
+  >
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18M12 3c2.5 2.5 3.75 5.5 3.75 9s-1.25 6.5-3.75 9c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3Z" />
+  </svg>
+  <label class="sr-only" for="language-switcher">{{ 'common.language' | transloco }}</label>
+  <select
+    id="language-switcher"
+    class="cursor-pointer bg-transparent text-sm font-medium text-gray-700 focus:outline-none"
+    [value]="activeLang()"
+    (change)="onChange($event)"
+  >
+    @for (lang of languages; track lang.code) {
+      <option [value]="lang.code">{{ lang.label }}</option>
+    }
+  </select>
+</div>
